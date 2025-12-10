@@ -1,4 +1,9 @@
 
+using api_service.Data;
+using api_service.Services.Implements;
+using api_service.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 namespace api_service
 {
     public class Program
@@ -7,12 +12,18 @@ namespace api_service
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
+            builder.Services.AddDbContext<ProductDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDbContext")));
+
             // Add services to the container.
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<IProductService, ProductService>();
 
             var app = builder.Build();
 
