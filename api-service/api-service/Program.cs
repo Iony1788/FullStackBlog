@@ -13,8 +13,6 @@ namespace api_service
             var builder = WebApplication.CreateBuilder(args);
 
 
-            builder.Services.AddDbContext<ProductDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDbContext")));
 
             // Add services to the container.
 
@@ -23,7 +21,6 @@ namespace api_service
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<IProductService, ProductService>();
 
             var app = builder.Build();
 
