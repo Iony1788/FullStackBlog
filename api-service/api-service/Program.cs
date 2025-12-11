@@ -1,7 +1,6 @@
-
-using api_service.Data;
 using api_service.Services.Implements;
 using api_service.Services.Interfaces;
+using api_service.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace api_service
@@ -12,19 +11,21 @@ namespace api_service
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            
+            builder.Services.AddDbContext<BlogDatabase>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("BlogDatabase")));
 
-
-            // Add services to the container.
-
+      
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddScoped<IBlogPost, BlogPostService>();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+         
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -32,9 +33,7 @@ namespace api_service
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
 
             app.MapControllers();
 
