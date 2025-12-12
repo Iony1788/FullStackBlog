@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import BlogPostService from "../Services/BlogPostService";
+import BlogPostService from "../servicess/BlogPostService";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';
