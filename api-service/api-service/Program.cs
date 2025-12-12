@@ -23,9 +23,21 @@ namespace api_service
 
             builder.Services.AddScoped<IBlogPost, BlogPostService>();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("ReactPolicy", builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000") 
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
+            });
+
             var app = builder.Build();
 
-         
+            app.UseCors("ReactPolicy");
+
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

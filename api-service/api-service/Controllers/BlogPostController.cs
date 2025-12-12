@@ -21,10 +21,33 @@ namespace api_service.Controlers
         [HttpGet("blogposts")]
         public async Task<List<BlogPost>> GetAllBlogPosts()
         {
-            var listBlogPosts = await _blogPostService.getAllBlogPostAsync();
+            var listBlogPosts = await _blogPostService.GetAllBlogPostAsync();
 
-            return  listBlogPosts;
+            return listBlogPosts;
 
         }
+
+        [HttpGet("{id}")]
+        public async Task<BlogPost> GetBlogPostById(int id)
+        {
+            var BlogPostId = await _blogPostService.GetBlogPostByIdAsync(id);
+            return BlogPostId;
+        }
+        
+
+        [HttpPut("editBlogPost/{id}")]
+        public async Task<ActionResult<BlogPost>> EditBlogPost(int id, [FromBody] BlogPost blogPost)
+        {
+            
+            var updatedBlogPost = await _blogPostService.EditBlogPostAsync(id, blogPost);
+
+            if (updatedBlogPost == null)
+            {
+                return NotFound("Blog post not found");
+            }
+
+            return Ok(updatedBlogPost);
+        }
+
     }
 }

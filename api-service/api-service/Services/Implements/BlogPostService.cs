@@ -14,10 +14,35 @@ namespace api_service.Services.Implements
             _context = context;
         }
 
-        public async Task<List<BlogPost>> getAllBlogPostAsync()
+        public async Task<List<BlogPost>> GetAllBlogPostAsync()
         {
             var listBlogPost = await _context.BlogPosts.ToListAsync();
             return listBlogPost;
+        }
+
+        public async Task<BlogPost> GetBlogPostByIdAsync(int id)
+        {
+            var idBlogPost = await _context.BlogPosts.FindAsync(id);
+
+            return idBlogPost;
+        }
+
+        public async Task<BlogPost> EditBlogPostAsync(int id,BlogPost blogPost)
+        {
+            var blogEdit = await _context.BlogPosts.FindAsync(id);
+
+            if (blogEdit == null)
+            {
+                return null;
+            }
+
+            blogEdit.Title = blogPost.Title;
+            blogEdit.Content = blogPost.Content;
+            blogEdit.Author = blogPost.Author;
+
+            await _context.SaveChangesAsync();
+
+            return blogEdit;
         }
 
     }

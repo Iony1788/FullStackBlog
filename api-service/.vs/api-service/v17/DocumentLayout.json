@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "D:\\job\\FullStackBlog\\api-service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\services\\implements\\blogpostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\services\\implements\\blogpostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\services\\interfaces\\iblogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\services\\interfaces\\iblogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\data\\blogdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\data\\blogdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\api-service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\api-service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|d:\\job\\fullstackblog\\api-service\\api-service\\api-service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2142E841-D523-4078-A533-2BC5FCE0CC72}|api-service\\api-service.csproj|solutionrelative:api-service\\api-service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,37 +47,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\appsettings.json",
-              "RelativeDocumentMoniker": "api-service\\appsettings.json",
-              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\appsettings.json",
-              "RelativeToolTip": "api-service\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-10T08:03:27.214Z",
+              "Title": "IBlogPost.cs",
+              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\Services\\Interfaces\\IBlogPost.cs",
+              "RelativeDocumentMoniker": "api-service\\Services\\Interfaces\\IBlogPost.cs",
+              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\Services\\Interfaces\\IBlogPost.cs",
+              "RelativeToolTip": "api-service\\Services\\Interfaces\\IBlogPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T11:32:53.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BlogPostService.cs",
+              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\Services\\Implements\\BlogPostService.cs",
+              "RelativeDocumentMoniker": "api-service\\Services\\Implements\\BlogPostService.cs",
+              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\Services\\Implements\\BlogPostService.cs",
+              "RelativeToolTip": "api-service\\Services\\Implements\\BlogPostService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:54:27.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlogPostController.cs",
+              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\Controllers\\BlogPostController.cs",
+              "RelativeDocumentMoniker": "api-service\\Controllers\\BlogPostController.cs",
+              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\Controllers\\BlogPostController.cs",
+              "RelativeToolTip": "api-service\\Controllers\\BlogPostController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:53:21.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlogDatabase.cs",
+              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\Data\\BlogDatabase.cs",
+              "RelativeDocumentMoniker": "api-service\\Data\\BlogDatabase.cs",
+              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\Data\\BlogDatabase.cs",
+              "RelativeToolTip": "api-service\\Data\\BlogDatabase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:50:19.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlogPost.cs",
+              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\Models\\BlogPost.cs",
+              "RelativeDocumentMoniker": "api-service\\Models\\BlogPost.cs",
+              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\Models\\BlogPost.cs",
+              "RelativeToolTip": "api-service\\Models\\BlogPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:45:13.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\appsettings.json",
+              "RelativeDocumentMoniker": "api-service\\appsettings.json",
+              "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\appsettings.json",
+              "RelativeToolTip": "api-service\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-10T08:03:27.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "api-service.csproj",
               "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\api-service.csproj",
               "RelativeDocumentMoniker": "api-service\\api-service.csproj",
               "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\api-service.csproj",
               "RelativeToolTip": "api-service\\api-service.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-12-10T07:42:14.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\job\\FullStackBlog\\api-service\\api-service\\Program.cs",
               "RelativeDocumentMoniker": "api-service\\Program.cs",
               "ToolTip": "D:\\job\\FullStackBlog\\api-service\\api-service\\Program.cs",
               "RelativeToolTip": "api-service\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwB8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T05:33:47.836Z",
               "EditorCaption": ""

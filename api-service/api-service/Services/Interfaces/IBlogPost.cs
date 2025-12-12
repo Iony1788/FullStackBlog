@@ -4,6 +4,9 @@ namespace api_service.Services.Interfaces
 {
     public interface IBlogPost
     {
-        Task<List<BlogPost>> getAllBlogPostAsync();
+        Task<List<BlogPost>> GetAllBlogPostAsync();
+
+        Task<BlogPost> GetBlogPostByIdAsync(int id);
+        Task<BlogPost> EditBlogPostAsync(int id, BlogPost blogPost);
     }
 }
