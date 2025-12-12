@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import BlogPostService from "../servicess/BlogPostService";
+import BlogPostService from "../services/BlogPostService";
 import Swal from 'sweetalert2';
 
 
