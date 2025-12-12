@@ -57,5 +57,12 @@ namespace api_service.Controlers
 
         }
 
+        [HttpDelete("delete/{id}")]
+        public async Task<BlogPost> DeleteBlogPost(int id)
+        {
+            var deleteBlogPost = await _blogPostService.DeleteBlogPostAsync(id);
+            return deleteBlogPost;
+        }
+
     }
 }

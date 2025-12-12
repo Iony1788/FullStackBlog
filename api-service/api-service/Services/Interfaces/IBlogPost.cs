@@ -12,5 +12,7 @@ namespace api_service.Services.Interfaces
 
         Task<BlogPost> AddBlogPostAsync(BlogPost blogPost);
 
+        Task<BlogPost> DeleteBlogPostAsync(int id);
+
     }
 }

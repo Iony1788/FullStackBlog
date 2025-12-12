@@ -55,5 +55,22 @@ namespace api_service.Services.Implements
 
         }
 
+
+        public async Task<BlogPost> DeleteBlogPostAsync(int id)
+        {
+            var blogPostToDelete = await _context.BlogPosts.FindAsync(id);
+
+            if (blogPostToDelete == null)
+            {
+                return null; 
+            }
+
+            _context.BlogPosts.Remove(blogPostToDelete); 
+            await _context.SaveChangesAsync(); 
+
+            return blogPostToDelete;
+        }
+
+
     }
 }
