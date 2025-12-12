@@ -1,5 +1,4 @@
 import axios from "axios";
-//const API_URL = "https://localhost:7151/api/BlogPosts";
 
 const API_URL = "https://localhost:7151/api/BlogPost";
 
