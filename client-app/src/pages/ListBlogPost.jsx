@@ -1,74 +1,99 @@
 import React, { useEffect, useState } from "react";
 import BlogPostService from "../services/BlogPostService";
+import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom";
 
 function ListBlogPost() {
-  const [blogposts, setPosts] = useState([]);
+  const [blogposts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     BlogPostService.getAllBlogPosts()
       .then((response) => {
-        setPosts(response.data);
+        setBlogPosts(response.data);
         setLoading(false);
       })
-      .catch((error) => {
+      .catch(() => {
         setError("Error fetching blog posts");
         setLoading(false);
       });
   }, []);
 
-  if (loading) {
-    return (
-      <div className="container mt-4">
-        <h2 className="mb-3">Loading blog posts...</h2>
-      </div>
-    );
-  }
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        BlogPostService.deleteBlogPost(id)
+          .then(() => {
+            setBlogPosts(blogposts.filter(p => p.id !== id));
+            Swal.fire('Deleted!', 'The blog post has been deleted.', 'success');
+          })
+          .catch(() => {
+            Swal.fire('Error', 'Failed to delete the blog post.', 'error');
+          });
+      }
+    });
+  };
 
-  if (error) {
-    return (
-      <div className="container mt-4">
-        <p>{error}</p>
-      </div>
-    );
-  }
+  if (loading) return <h3 className="m-4 text-center">Loading blog posts...</h3>;
+  if (error) return <p className="m-4 text-center text-danger">{error}</p>;
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-3">View the blog posts</h2>
-     <button className="btn btn-primary btn-sm me-2 mt-3" onClick={() => window.location.href = `/AddBlogPost`}>
-        Add blog post
-     </button>
-      <table className="table table-striped table-bordered mt-4">
-        <thead className="thead-dark">
-          <tr>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Author</th>
-            <th>Created</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {blogposts.map((blogpost) => (
-            <tr key={blogpost.id}>
-              <td>{blogpost.title}</td>
-              <td>{blogpost.content}</td>
-              <td>{blogpost.author}</td>
-              <td>{blogpost.createdAt}</td>
-              <td className="d-flex">
-              <button className="btn btn-sm btn-warning me-2" onClick={() => window.location.href = `/EditBlogPost/${blogpost.id}`}>
-                Edit
-              </button>
-              <button className="btn btn-sm btn-danger" onClick={() => window.location.href = `/delete/${blogpost.id}`}>
-                Delete
-              </button>
-            </td>
+      <h2 className="mb-3 text-center text-md-start">View the blog posts</h2>
+
+      <div className="d-flex justify-content-center justify-content-md-start mb-3">
+        <button
+          className="btn btn-success btn-sm"
+          onClick={() => navigate("/AddBlogPost")}
+        >
+          Add blog post
+        </button>
+      </div>
+
+      <div className="table-responsive">
+        <table className="table table-striped table-bordered">
+          <thead className="thead-dark">
+            <tr>
+              <th>Title</th>
+              <th>Content</th>
+              <th>Author</th>
+              <th>Created</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {blogposts.map((blogpost) => (
+              <tr key={blogpost.id}>
+                <td>{blogpost.title}</td>
+                <td>{blogpost.content}</td>
+                <td>{blogpost.author}</td>
+                <td>{blogpost.createdAt}</td>
+                <td className="d-flex flex-column flex-md-row gap-2">
+                  <button
+                    className="btn btn-sm btn-warning"
+                    onClick={() => navigate(`/EditBlogPost/${blogpost.id}`)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={() => handleDelete(blogpost.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

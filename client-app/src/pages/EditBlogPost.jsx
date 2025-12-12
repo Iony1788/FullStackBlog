@@ -28,7 +28,6 @@ function EditBlogPost() {
       });
   }, [id]);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -54,18 +53,13 @@ function EditBlogPost() {
       });
   };
 
-  if (loading) {
-    return <h3 className="m-4">Loading...</h3>;
-  }
-
-  if (error) {
-    return <p className="m-4">{error}</p>;
-  }
+  if (loading) return <h3 className="m-4 text-center">Loading...</h3>;
+  if (error) return <p className="m-4 text-center text-danger">{error}</p>;
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-3">Edit Blog Post</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="mb-3 text-center text-md-start">Edit Blog Post</h2>
+      <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '600px' }}>
         
         <div className="mb-3">
           <label className="form-label">Title</label>
@@ -74,6 +68,7 @@ function EditBlogPost() {
             className="form-control"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            placeholder="Enter blog title"
             required
           />
         </div>
@@ -85,6 +80,7 @@ function EditBlogPost() {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             rows={5}
+            placeholder="Enter blog content"
             required
           />
         </div>
@@ -96,13 +92,16 @@ function EditBlogPost() {
             className="form-control"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+            placeholder="Enter author name"
             required
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          Update
-        </button>
+        <div className="text-center text-md-start">
+          <button type="submit" className="btn btn-primary w-100 w-md-auto">
+            Update
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -18,9 +18,14 @@ const addBlogPost = (data) => {
     return axios.post(`${API_URL}/addBlogPost`, data);
 };
 
+const deleteBlogPost = (id) => {
+    return axios.delete(`${API_URL}/delete/${id}`);
+}
+
 export default {
     getAllBlogPosts,
     getBlogPostById,
     editBlogPost,
     addBlogPost,
+    deleteBlogPost,
 };
