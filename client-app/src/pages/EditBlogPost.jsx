@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import BlogPostService from "../services/BlogPostService";
 import Swal from 'sweetalert2';
 
+
 function EditBlogPost() {
   const { id } = useParams(); 
   const navigate = useNavigate();

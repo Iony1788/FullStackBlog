@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import BlogPostService from "../services/BlogPostService";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 function AddBlogPost() {
     const [title, setTitle] = useState("");
@@ -52,6 +54,15 @@ function AddBlogPost() {
           text: "Failed to add blog post.",
         });
       });
+
+       if (!title.trim() || !content.trim() || !author.trim()) {
+            Swal.fire({
+            icon: "warning",
+            title: "All fields are required",
+            text: "Please fill in all fields before submitting."
+            });
+            return; // Arrête l'exécution si un champ est vide
+        }
   };
 
     return (
@@ -61,8 +72,7 @@ function AddBlogPost() {
     
     <div className="mb-3">
       <label className="form-label">Title</label>
-      <input
-        type="text"
+      <input type="text"
         className="form-control"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -98,6 +108,9 @@ function AddBlogPost() {
     <button type="submit" className="btn btn-success">
       Add Blog Post
     </button>
+    <Link  to="/ListBlogPost" className="btn btn-primary mt-1 ms-3 active">
+      Return to list
+    </Link>
   </form>
 </div>
     );

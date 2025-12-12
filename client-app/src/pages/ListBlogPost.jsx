@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import BlogPostService from "../services/BlogPostService";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function ListBlogPost() {
   const [blogposts, setBlogPosts] = useState([]);
@@ -53,7 +55,7 @@ function ListBlogPost() {
           className="btn btn-success btn-sm"
           onClick={() => navigate("/AddBlogPost")}
         >
-          Add blog post
+           <i className="bi bi-plus-lg me-1"></i> Add Blog Post
         </button>
       </div>
 
@@ -80,13 +82,13 @@ function ListBlogPost() {
                     className="btn btn-sm btn-warning"
                     onClick={() => navigate(`/EditBlogPost/${blogpost.id}`)}
                   >
-                    Edit
+                    <i className="bi bi-pencil-fill"></i>
                   </button>
                   <button
                     className="btn btn-sm btn-danger"
                     onClick={() => handleDelete(blogpost.id)}
                   >
-                    Delete
+                     <i className="bi bi-trash-fill"></i>
                   </button>
                 </td>
               </tr>
