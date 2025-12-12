@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import BlogPostService from "../services/BlogPostService";
+import Swal from 'sweetalert2';
 
 function EditBlogPost() {
   const { id } = useParams(); 
@@ -34,8 +35,23 @@ function EditBlogPost() {
     const updatedPost = { id, title, content, author };
 
     BlogPostService.editBlogPost(id, updatedPost)
-      .then(() => navigate("/ListBlogPost"))
-      .catch(() => setError("Error updating blog post"));
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Updated!",
+          text: "The blog post has been updated.",
+          confirmButtonText: "OK"
+        }).then(() => {
+          navigate("/ListBlogPost");
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Failed to update blog post."
+        });
+      });
   };
 
   if (loading) {

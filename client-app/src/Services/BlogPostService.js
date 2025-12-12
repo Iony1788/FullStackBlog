@@ -14,8 +14,13 @@ const editBlogPost = (id, data) => {
     return axios.put(`${API_URL}/editBlogPost/${id}`, data);
 };
 
+const addBlogPost = (data) => {
+    return axios.post(`${API_URL}/addBlogPost`, data);
+};
+
 export default {
     getAllBlogPosts,
     getBlogPostById,
-    editBlogPost
+    editBlogPost,
+    addBlogPost,
 };

@@ -37,7 +37,10 @@ function ListBlogPost() {
   return (
     <div className="container mt-4">
       <h2 className="mb-3">View the blog posts</h2>
-      <table className="table table-striped table-bordered">
+     <button className="btn btn-primary btn-sm me-2 mt-3" onClick={() => window.location.href = `/AddBlogPost`}>
+        Add blog post
+     </button>
+      <table className="table table-striped table-bordered mt-4">
         <thead className="thead-dark">
           <tr>
             <th>Title</th>
@@ -55,7 +58,7 @@ function ListBlogPost() {
               <td>{blogpost.author}</td>
               <td>{blogpost.createdAt}</td>
               <td className="d-flex">
-              <button className="btn btn-sm btn-primary me-2" onClick={() => window.location.href = `/EditBlogPost/${blogpost.id}`}>
+              <button className="btn btn-sm btn-warning me-2" onClick={() => window.location.href = `/EditBlogPost/${blogpost.id}`}>
                 Edit
               </button>
               <button className="btn btn-sm btn-danger" onClick={() => window.location.href = `/delete/${blogpost.id}`}>

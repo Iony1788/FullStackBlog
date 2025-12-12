@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ListBlogPost from "./pages/ListBlogPost";
 import EditBlogPost from "./pages/EditBlogPost";
+import AddBlogPost from "./pages/AddBlogPost";
 import Home from "./components/Home";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/ListBlogPost" element={<ListBlogPost />} />
             <Route path="/EditBlogPost/:id" element={<EditBlogPost />} />
+            <Route path="/AddBlogPost" element={<AddBlogPost />} />
           </Routes>
         </main>
 
