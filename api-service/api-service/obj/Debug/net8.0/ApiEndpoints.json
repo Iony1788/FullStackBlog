@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "api_service.Controlers.BlogPostController",
+    "Method": "AddBlogPost",
+    "RelativePath": "api/BlogPost/addBlogPost",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "blogPost",
+        "Type": "api_service.Models.BlogPost",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_service.Models.BlogPost",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_service.Controlers.BlogPostController",
     "Method": "GetAllBlogPosts",
     "RelativePath": "api/BlogPost/blogposts",
     "HttpMethod": "GET",

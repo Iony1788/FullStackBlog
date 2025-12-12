@@ -33,12 +33,12 @@ namespace api_service.Controlers
             var BlogPostId = await _blogPostService.GetBlogPostByIdAsync(id);
             return BlogPostId;
         }
-        
+
 
         [HttpPut("editBlogPost/{id}")]
         public async Task<ActionResult<BlogPost>> EditBlogPost(int id, [FromBody] BlogPost blogPost)
         {
-            
+
             var updatedBlogPost = await _blogPostService.EditBlogPostAsync(id, blogPost);
 
             if (updatedBlogPost == null)
@@ -47,6 +47,14 @@ namespace api_service.Controlers
             }
 
             return Ok(updatedBlogPost);
+        }
+
+        [HttpPost("addBlogPost")]
+        public async Task<BlogPost> AddBlogPost([FromBody] BlogPost blogPost)
+        {
+            var addBlogPost = await _blogPostService.AddBlogPostAsync(blogPost);
+            return addBlogPost;
+
         }
 
     }

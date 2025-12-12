@@ -27,7 +27,7 @@ namespace api_service.Services.Implements
             return idBlogPost;
         }
 
-        public async Task<BlogPost> EditBlogPostAsync(int id,BlogPost blogPost)
+        public async Task<BlogPost> EditBlogPostAsync(int id, BlogPost blogPost)
         {
             var blogEdit = await _context.BlogPosts.FindAsync(id);
 
@@ -43,6 +43,16 @@ namespace api_service.Services.Implements
             await _context.SaveChangesAsync();
 
             return blogEdit;
+        }
+
+        public async Task<BlogPost> AddBlogPostAsync(BlogPost blogPost)
+        {
+            var newBlogPost = await _context.BlogPosts.AddAsync(blogPost);
+
+            await _context.SaveChangesAsync();
+
+            return newBlogPost.Entity; ;
+
         }
 
     }

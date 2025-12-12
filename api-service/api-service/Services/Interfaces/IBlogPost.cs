@@ -7,6 +7,10 @@ namespace api_service.Services.Interfaces
         Task<List<BlogPost>> GetAllBlogPostAsync();
 
         Task<BlogPost> GetBlogPostByIdAsync(int id);
+
         Task<BlogPost> EditBlogPostAsync(int id, BlogPost blogPost);
+
+        Task<BlogPost> AddBlogPostAsync(BlogPost blogPost);
+
     }
 }
