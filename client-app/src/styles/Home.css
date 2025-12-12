@@ -1,0 +1,24 @@
+.home-page {
+  font-family: Arial, sans-serif;
+}
+
+.home-page h2 {
+  color: rgb(25, 62, 135);
+  font-weight: bold;
+}
+
+.home-page p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.home-page .btn-primary {
+  background-color: rgb(25, 62, 135);
+  border-color: rgb(25, 62, 135);
+  transition: background-color 0.3s;
+}
+
+.home-page .btn-primary:hover {
+  background-color: rgb(10, 40, 90);
+  border-color: rgb(10, 40, 90);
+}
