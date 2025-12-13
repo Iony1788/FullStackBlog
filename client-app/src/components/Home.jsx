@@ -20,13 +20,12 @@ function Home() {
         </div>
 
         <div className="col-md-6">
-          <img 
-            src="/imageHome.jpg" 
-            alt="" 
+         <img 
+            src={`${process.env.PUBLIC_URL}/imageHome.png`} 
+            alt="Home" 
             className="img-fluid rounded shadow"
           />
         </div>
-
       </div>
     </div>
   );
