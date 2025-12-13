@@ -64,5 +64,11 @@ namespace api_service.Controlers
             return deleteBlogPost;
         }
 
+        [HttpGet("paginate")]
+        public async Task<List<BlogPost>> PaginateBlogPosts([FromQuery] int page, [FromQuery] int pageSize)
+        {
+            var paginatedBlogPosts = await _blogPostService.PaginateBlogPostAsync(page, pageSize);
+            return paginatedBlogPosts;
+        }
     }
 }

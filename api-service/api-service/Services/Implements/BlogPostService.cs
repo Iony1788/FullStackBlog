@@ -71,6 +71,16 @@ namespace api_service.Services.Implements
             return blogPostToDelete;
         }
 
+        public async Task<List<BlogPost>> PaginateBlogPostAsync(int page, int pageSize)
+        {
+            return await _context.BlogPosts
+                .OrderByDescending(b => b.Id) 
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        }
+
+
 
     }
 }

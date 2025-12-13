@@ -14,5 +14,7 @@ namespace api_service.Services.Interfaces
 
         Task<BlogPost> DeleteBlogPostAsync(int id);
 
+        Task<List<BlogPost>> PaginateBlogPostAsync(int page, int pageSize);
+
     }
 }

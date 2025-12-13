@@ -22,10 +22,15 @@ const deleteBlogPost = (id) => {
     return axios.delete(`${API_URL}/delete/${id}`);
 }
 
+const paginateBlogPosts = (page, pageSize) => {
+    return axios.get(`${API_URL}/paginate?page=${page}&pageSize=${pageSize}`);
+};
+
 export default {
     getAllBlogPosts,
     getBlogPostById,
     editBlogPost,
     addBlogPost,
     deleteBlogPost,
+    paginateBlogPosts,
 };
