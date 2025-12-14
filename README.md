@@ -40,14 +40,15 @@ Make sure you have installed:
    ```bash
    https://github.com/Iony1788/FullStackBlog.git
 2. Configure the connection string:
- ```bash
-"ConnectionStrings": {
-   "BlogDatabase": "Server=YOUR_SERVER;Database=BlogPost;Trusted_Connection=True;MultipleActiveResultSets=true"
- }
- OR
- "ConnectionStrings": {
-  "DefaultConnection": "Server=YOUR_SERVER;Database=BlogDb;User Id=sa;Password=YOUR_PASSWORD;"
-}
+   ```bash
+   "ConnectionStrings": {
+     "BlogDatabase": "Server=YOUR_SERVER;Database=BlogPost;Trusted_Connection=True;MultipleActiveResultSets=true"
+   }
+   OR
+   "ConnectionStrings": {
+    "DefaultConnection": "Server=YOUR_SERVER;Database=BlogDb;User Id=sa;Password=YOUR_PASSWORD;"
+  }
+
 
 3. Apply database migrations:
    - Open Package Manager Console in Visual Studio.
