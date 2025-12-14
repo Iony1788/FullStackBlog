@@ -10,7 +10,7 @@ function ListBlogPost() {
   const [error, setError] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1); 
-  const pageSize = 10;
+  const pageSize = 5;
 
   const navigate = useNavigate();
 

@@ -29,6 +29,7 @@ namespace api_service.Services.Implements
 
         public async Task<BlogPost> EditBlogPostAsync(int id, BlogPost blogPost)
         {
+
             var blogEdit = await _context.BlogPosts.FindAsync(id);
 
             if (blogEdit == null)

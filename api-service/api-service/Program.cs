@@ -1,6 +1,7 @@
+using api_service.Data;
+using api_service.Middleware;
 using api_service.Services.Implements;
 using api_service.Services.Interfaces;
-using api_service.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace api_service
@@ -17,6 +18,10 @@ namespace api_service
 
       
             builder.Services.AddControllers();
+
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+            builder.Services.AddProblemDetails();
+
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -46,7 +51,7 @@ namespace api_service
 
             app.UseHttpsRedirection();
             app.UseAuthorization();
-
+            app.UseExceptionHandler();
             app.MapControllers();
 
             app.Run();
