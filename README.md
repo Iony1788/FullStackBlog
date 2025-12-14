@@ -53,8 +53,10 @@ Make sure you have installed:
 3. Apply database migrations:
    - Open Package Manager Console in Visual Studio.
    - Make sure the Default project is set to api-service.
-   - Run the update-database command: Update-Database
-   - 
+   - Run the update-database command:
+     ```bash
+     Update-Database
+     
 4. API Documentation (Swagger):
    ```bash
     https://localhost:7151/swagger/index.html
