@@ -40,7 +40,8 @@ Make sure you have installed:
    ```bash
    https://github.com/Iony1788/FullStackBlog.git
 2. Configure the connection string:
- "ConnectionStrings": {
+ ```bash
+"ConnectionStrings": {
    "BlogDatabase": "Server=YOUR_SERVER;Database=BlogPost;Trusted_Connection=True;MultipleActiveResultSets=true"
  }
  OR
